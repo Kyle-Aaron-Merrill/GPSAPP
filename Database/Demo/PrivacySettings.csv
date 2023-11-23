@@ -1,0 +1,3 @@
+PrivacyID,UserID,ActivityID,IsPublic
+1,2,1,true
+2,3,2,false

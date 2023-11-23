@@ -1,0 +1,4 @@
+UserID,Username,Password,Email,Role
+1,admin,$2a$10$1LJ9l3pz43dq14Ky9sXzV.Lho28VnZ9j6R/GoP1xuFnyRX1Zu0/LW,admin@example.com,Admin
+2,user1,$2a$10$hfg.t5S/duQFiknz..At6uLAMnzZ4e5F5I17JEWCoD8FthYOoz/5y, user1@example.com,Regular User
+3,user2,$2a$10$MCycb93llsZJj8cHHOV2AOws6s8MTVB8WR9pAmE6P1/8HT4.CIZCu, user2@example.com,Regular User

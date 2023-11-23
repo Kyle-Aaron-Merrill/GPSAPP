@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\Users\gamer pc\Desktop\GPSAPP\Database\GPSAPP.sqilite.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="3268"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,4:mainUser"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="APITokens" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="83"/><column index="2" value="51"/><column index="3" value="79"/><column index="4" value="46"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="Activity" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="73"/><column index="2" value="51"/><column index="3" value="129"/><column index="4" value="129"/><column index="5" value="64"/><column index="6" value="64"/><column index="7" value="104"/><column index="8" value="94"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="FileStorage" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="42"/><column index="2" value="73"/><column index="3" value="59"/><column index="4" value="58"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="LocationPoint" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="77"/><column index="2" value="73"/><column index="3" value="62"/><column index="4" value="72"/><column index="5" value="60"/><column index="6" value="77"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="PrivacySettings" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="70"/><column index="2" value="51"/><column index="3" value="73"/><column index="4" value="57"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="User" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort><column index="2" mode="0"/></sort><column_widths><column index="1" value="51"/><column index="2" value="72"/><column index="3" value="300"/><column index="4" value="130"/><column index="5" value="81"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-- Create a new table with the desired structure if it doesn't exist
+CREATE TABLE IF NOT EXISTS &quot;APITokens_New&quot; (
+    &quot;APITokenID&quot; INTEGER PRIMARY KEY,
+    &quot;UserID&quot; INTEGER NOT NULL,
+    &quot;APIService&quot; VARCHAR(50) NOT NULL,
+    &quot;Token&quot; VARCHAR(255) NOT NULL,
+    &quot;StravaAPIToken&quot; VARCHAR(255),
+    &quot;RideWithGPSAPIToken&quot; VARCHAR(255),
+    -- Add more properties for other API tokens
+    &quot;PopulationDensityAPIToken&quot; VARCHAR(255),
+    &quot;AccelerometerAPIToken&quot; VARCHAR(255),
+    &quot;GoogleMapsAPIToken&quot; VARCHAR(255),
+    &quot;GPSLoggerAPIToken&quot; VARCHAR(255),
+    &quot;StravaTokenExpiration&quot; DATETIME,
+    &quot;RideWithGPSTokenExpiration&quot; DATETIME,
+    -- Add more expiration properties for other tokens
+    FOREIGN KEY(&quot;UserID&quot;) REFERENCES &quot;User&quot;(&quot;UserID&quot;)
+);
+
+-- Copy data from the old table to the new table, explicitly specifying columns
+INSERT INTO &quot;APITokens_New&quot; (&quot;APITokenID&quot;, &quot;UserID&quot;, &quot;APIService&quot;, &quot;Token&quot;)
+SELECT &quot;APITokenID&quot;, &quot;UserID&quot;, &quot;APIService&quot;, &quot;Token&quot;
+FROM &quot;APITokens&quot;;
+
+-- Drop the old table
+DROP TABLE &quot;APITokens&quot;;
+
+-- Rename the new table to the original table name
+ALTER TABLE &quot;APITokens_New&quot; RENAME TO &quot;APITokens&quot;;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
