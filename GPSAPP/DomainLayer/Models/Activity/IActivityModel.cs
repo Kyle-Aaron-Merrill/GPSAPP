@@ -2,7 +2,7 @@
 
 namespace DomainLayer.Models.Activity
 {
-    internal interface IActivityModel
+    public interface IActivityModel
     {
         int ActivityID { get; set; }
         string ActivityType { get; set; }

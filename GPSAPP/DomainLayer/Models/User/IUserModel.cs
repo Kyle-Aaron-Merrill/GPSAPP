@@ -2,7 +2,7 @@
 
 namespace DomainLayer.Models.User
 {
-    internal interface IUserModel
+    public interface IUserModel
     {
         int? Age { get; set; }
         string CreditCardNumber { get; set; }

@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DomainLayer.Models.FileStorage
 {
-    internal class FileStorageModel : IFileStorageModel
+    public class FileStorageModel : IFileStorageModel
     {
         public int FileID { get; set; }
 

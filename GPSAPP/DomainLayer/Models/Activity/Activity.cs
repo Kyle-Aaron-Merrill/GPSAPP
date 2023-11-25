@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DomainLayer.Models.Activity
 {
-    internal class ActivityModel : IActivityModel
+    public class ActivityModel : IActivityModel
     {
         public int ActivityID { get; set; }
 

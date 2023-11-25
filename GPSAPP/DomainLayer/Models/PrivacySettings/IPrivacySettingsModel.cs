@@ -2,7 +2,7 @@
 
 namespace DomainLayer.Models.PrivacySettings
 {
-    internal interface IPrivacySettingsModel
+    public interface IPrivacySettingsModel
     {
         bool AllowComments { get; set; }
         bool AllowLikes { get; set; }

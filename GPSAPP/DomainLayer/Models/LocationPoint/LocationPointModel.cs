@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomainLayer.Models.LocationPoint
 {
-    internal class LocationPointModel : ILocationPointModel
+    public class LocationPointModel : ILocationPointModel
     {
         public int LocationID { get; set; }
 

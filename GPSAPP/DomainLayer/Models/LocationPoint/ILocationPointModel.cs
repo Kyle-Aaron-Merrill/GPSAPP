@@ -2,7 +2,7 @@
 
 namespace DomainLayer.Models.LocationPoint
 {
-    internal interface ILocationPointModel
+    public interface ILocationPointModel
     {
         int ActivityID { get; set; }
         double Altitude { get; set; }

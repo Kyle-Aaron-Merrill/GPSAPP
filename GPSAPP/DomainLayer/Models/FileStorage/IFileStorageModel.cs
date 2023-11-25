@@ -2,7 +2,7 @@
 
 namespace DomainLayer.Models.FileStorage
 {
-    internal interface IFileStorageModel
+    public interface IFileStorageModel
     {
         int ActivityID { get; set; }
         int FileID { get; set; }

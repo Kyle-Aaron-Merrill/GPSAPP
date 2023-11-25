@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DomainLayer.Models.PrivacySettings
 {
-    internal class PrivacySettingsModel : IPrivacySettingsModel
+    public class PrivacySettingsModel : IPrivacySettingsModel
     {
         public int PrivacySettingsID { get; set; }
 

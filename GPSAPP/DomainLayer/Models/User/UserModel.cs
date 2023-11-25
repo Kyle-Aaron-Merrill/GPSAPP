@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DomainLayer.Models.User
 {
-    internal class UserModel : IUserModel
+    public class UserModel : IUserModel
     {
         public int UserID { get; set; }
 
