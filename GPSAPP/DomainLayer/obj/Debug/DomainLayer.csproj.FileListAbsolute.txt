@@ -1,0 +1,6 @@
+C:\Users\gamer pc\Documents\Work\GPSAPP\GPSAPP\DomainLayer\bin\Debug\DomainLayer.dll
+C:\Users\gamer pc\Documents\Work\GPSAPP\GPSAPP\DomainLayer\bin\Debug\DomainLayer.pdb
+C:\Users\gamer pc\Documents\Work\GPSAPP\GPSAPP\DomainLayer\obj\Debug\DomainLayer.csproj.AssemblyReference.cache
+C:\Users\gamer pc\Documents\Work\GPSAPP\GPSAPP\DomainLayer\obj\Debug\DomainLayer.csproj.CoreCompileInputs.cache
+C:\Users\gamer pc\Documents\Work\GPSAPP\GPSAPP\DomainLayer\obj\Debug\DomainLayer.dll
+C:\Users\gamer pc\Documents\Work\GPSAPP\GPSAPP\DomainLayer\obj\Debug\DomainLayer.pdb

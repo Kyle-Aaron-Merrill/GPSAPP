@@ -9,9 +9,9 @@ namespace ServiceLayer.Services.UserServices
 {
     public interface IUserRepository
     {
-        void Add(UserModel userModel);
-        void Update(UserModel userModel);
-        void Delete(UserModel userModel);
+        void Add(IUserModel userModel);
+        void Update(IUserModel userModel);
+        void Delete(IUserModel userModel);
         IEnumerable<UserModel> GetAll();
         UserModel GetById(int id);
     }

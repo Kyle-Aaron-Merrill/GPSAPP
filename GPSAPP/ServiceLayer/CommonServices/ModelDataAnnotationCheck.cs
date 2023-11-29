@@ -10,7 +10,7 @@ namespace ServiceLayer.CommonServices
 {
     public class ModelDataAnnotationCheck : IModelDataAnnotationCheck
     {
-        public void ValidateModel<IDomainModel>(IDomainModel domainModel)
+        public void ValidateModelDataAnnotations<IDomainModel>(IDomainModel domainModel)
         {
             ICollection<ValidationResult> validationResultList = new List<ValidationResult>();
 

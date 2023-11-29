@@ -1,7 +1,9 @@
-﻿namespace ServiceLayer.CommonServices
+﻿using DomainLayer.Models.User;
+
+namespace ServiceLayer.CommonServices
 {
     public interface IModelDataAnnotationCheck
     {
-        void ValidateModel<IDomainModel>(IDomainModel domainModel);
+        void ValidateModelDataAnnotations<IDomainModel>(IDomainModel domainModel);
     }
 }

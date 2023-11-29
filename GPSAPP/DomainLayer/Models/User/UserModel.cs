@@ -19,6 +19,13 @@ namespace DomainLayer.Models.User
         [StringLength(255, MinimumLength = 6, ErrorMessage = "Password must be at least 6 characters.")]
         public string Password { get; set; }
 
+        [Required(ErrorMessage = "First name is required.")]
+        [StringLength(50, ErrorMessage = "First name must be at most 50 characters.")]
+        public string FirstName {  get; set; }
+        [Required(ErrorMessage = "Last name is required.")]
+        [StringLength(50, ErrorMessage = "Last name must be at most 50 characters.")]
+        public string LastName { get; set; }
+
         [Required(ErrorMessage = "Email is required.")]
         [EmailAddress(ErrorMessage = "Invalid email address.")]
         [StringLength(255, ErrorMessage = "Email must be at most 255 characters.")]

@@ -15,5 +15,7 @@ namespace DomainLayer.Models.User
         string Username { get; set; }
         string Website { get; set; }
         string ZipCode { get; set; }
+        string FirstName { get; set; }
+        string LastName { get; set; }
     }
 }

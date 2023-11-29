@@ -46,7 +46,7 @@
     <Compile Include="CommonServices\ModelDataAnnotationCheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\UserServices\IUserRepository.cs" />
-    <Compile Include="Services\UserServices\IUserService.cs" />
+    <Compile Include="Services\UserServices\IUserServices.cs" />
     <Compile Include="Services\UserServices\UserServices.cs" />
   </ItemGroup>
   <ItemGroup>
