@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DomainLayer.Models.APITokens
 {
-    public class APITokensModel : IAPITokensModel
+    public class ApiTokensModel : IApiTokensModel
     {
         public int APITokenID { get; set; }
 

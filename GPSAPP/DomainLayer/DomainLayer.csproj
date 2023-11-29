@@ -44,8 +44,8 @@
   <ItemGroup>
     <Compile Include="Models\Activity\Activity.cs" />
     <Compile Include="Models\Activity\IActivityModel.cs" />
-    <Compile Include="Models\APITokens\APITokensModel.cs" />
-    <Compile Include="Models\APITokens\IAPITokensModel.cs" />
+    <Compile Include="Models\APITokens\ApiTokensModel.cs" />
+    <Compile Include="Models\APITokens\IApiTokensModel.cs" />
     <Compile Include="Models\FileStorage\FileStorageModel.cs" />
     <Compile Include="Models\FileStorage\IFileStorageModel.cs" />
     <Compile Include="Models\LocationPoint\ILocationPointModel.cs" />

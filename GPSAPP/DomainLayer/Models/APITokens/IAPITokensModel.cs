@@ -2,7 +2,7 @@
 
 namespace DomainLayer.Models.APITokens
 {
-    public interface IAPITokensModel
+    public interface IApiTokensModel
     {
         string AccelerometerAPIToken { get; set; }
         int APITokenID { get; set; }
