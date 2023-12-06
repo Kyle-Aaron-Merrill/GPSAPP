@@ -4,7 +4,7 @@ namespace DomainLayer.Models.FileStorage
 {
     public interface IFileStorageModel
     {
-        int ActivityID { get; set; }
+        int? ActivityID { get; set; }
         int FileID { get; set; }
         string FileName { get; set; }
         string FilePath { get; set; }

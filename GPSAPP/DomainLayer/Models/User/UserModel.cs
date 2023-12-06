@@ -9,6 +9,7 @@ namespace DomainLayer.Models.User
 {
     public class UserModel : IUserModel
     {
+        [Required(ErrorMessage = "UserID is required.")]
         public int UserID { get; set; }
 
         [Required(ErrorMessage = "Username is required.")]
@@ -36,6 +37,7 @@ namespace DomainLayer.Models.User
 
         [Display(Name = "Date of Birth")]
         [DataType(DataType.Date)]
+        [Range(typeof(DateTime), "1/1/1900", "1/1/2023", ErrorMessage = "Invalid date of birth.")]
         public DateTime? DateOfBirth { get; set; }
 
         [RegularExpression(@"^[0-9]{5}$", ErrorMessage = "Invalid ZIP Code.")]

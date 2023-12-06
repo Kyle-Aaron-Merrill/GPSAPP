@@ -48,8 +48,12 @@ namespace ServiceLayer.Services.LocationPointServices
 
         public void ValidateModel(ILocationPointModel locationPointModel)
         {
+            throw new NotImplementedException();
+        }
+
+        public void ValidateModelDataAnnotations(ILocationPointModel locationPointModel)
+        {
             _modelDataAnnotationCheck.ValidateModelDataAnnotations(locationPointModel);
-            // Additional validation specific to Location Point, if needed
         }
 
         /*

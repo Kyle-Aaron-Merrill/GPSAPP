@@ -47,6 +47,10 @@ namespace ServiceLayer.Services.ApiTokensServices
 
         public void ValidateModel(IApiTokensModel apiTokensModel)
         {
+            throw new NotImplementedException();
+        }
+        public void ValidateModelDataAnnotations(IApiTokensModel apiTokensModel) 
+        {
             _modelDataAnnotationCheck.ValidateModelDataAnnotations(apiTokensModel);
             // Additional validation specific to API Tokenss
         }

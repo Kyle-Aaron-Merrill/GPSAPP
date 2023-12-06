@@ -89,7 +89,138 @@ namespace ServicesLayer.Test
             WriteExceptionTestResult(exception);
         }
 
-        // Add similar tests for DateOfBirth, ZipCode, Age, PhoneNumber, Website, CreditCardNumber, Role, and other properties...
+        [Fact]
+        public void ShouldPassValidationForValidUsername()
+        {
+            _userServicesFixture.UserModel.Username = "john.doe";
+
+            var exception = Record.Exception(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            Assert.Null(exception);
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForInvalidUsername()
+        {
+            _userServicesFixture.UserModel.Username = "jd"; // Assume this is shorter than the required length.
+
+            var exception = Assert.Throws<ArgumentException>(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldPassValidationForValidRole()
+        {
+            _userServicesFixture.UserModel.Role = "User";
+
+            var exception = Record.Exception(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            Assert.Null(exception);
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForInvalidRole()
+        {
+            _userServicesFixture.UserModel.Role = "AdministratorWithAnUnnecessarilyLongRoleNameThatHasMoreThan50Chars"; // Assume this is longer than the allowed length.
+
+            var exception = Assert.Throws<ArgumentException>(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldPassValidationForValidDateOfBirth()
+        {
+            _userServicesFixture.UserModel.DateOfBirth = new DateTime(1990, 1, 1);
+
+            var exception = Record.Exception(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            Assert.Null(exception);
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForInvalidDateOfBirth()
+        {
+            _userServicesFixture.UserModel.DateOfBirth = DateTime.Today.AddDays(1);
+
+            var exception = Assert.Throws<ArgumentException>(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldPassValidationForValidZipCode()
+        {
+            _userServicesFixture.UserModel.ZipCode = "12345";
+
+            var exception = Record.Exception(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            Assert.Null(exception);
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForInvalidZipCode()
+        {
+            _userServicesFixture.UserModel.ZipCode = "invalidZipCode";
+
+            var exception = Assert.Throws<ArgumentException>(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldPassValidationForValidAge()
+        {
+            _userServicesFixture.UserModel.Age = 25;
+
+            var exception = Record.Exception(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            Assert.Null(exception);
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForInvalidAge()
+        {
+            _userServicesFixture.UserModel.Age = -5; // Assume this is a negative age.
+
+            var exception = Assert.Throws<ArgumentException>(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldPassValidationForValidPhoneNumber()
+        {
+            _userServicesFixture.UserModel.PhoneNumber = "123-456-7890";
+
+            var exception = Record.Exception(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            Assert.Null(exception);
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForInvalidPhoneNumber()
+        {
+            _userServicesFixture.UserModel.PhoneNumber = "invalidPhoneNumber";
+
+            var exception = Assert.Throws<ArgumentException>(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldPassValidationForValidCreditCardNumber()
+        {
+            _userServicesFixture.UserModel.CreditCardNumber = "4234-5678-9012-3456";
+
+            var exception = Record.Exception(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            Assert.Null(exception);
+            WriteExceptionTestResult(exception);
+        }
+
+        [Fact]
+        public void ShouldThrowExceptionForInvalidCreditCardNumber()
+        {
+            _userServicesFixture.UserModel.CreditCardNumber = "invalidCreditCardNumber";
+
+            var exception = Assert.Throws<ArgumentException>(() => _userServicesFixture.UserServices.ValidateModelDataAnnotations(_userServicesFixture.UserModel));
+            WriteExceptionTestResult(exception);
+        }
 
         private void SetValidSampleValues()
         {
@@ -103,15 +234,16 @@ namespace ServicesLayer.Test
                 LastName = "Doe",
                 Email = "john.doe@example.com",
                 Role = "User",
-                DateOfBirth = new DateTime(1990, 1, 1),
+                DateOfBirth = new DateTime(1990,1,1),
                 ZipCode = "12345",
                 Age = 30,
                 PhoneNumber = "123-456-7890",
                 Website = "http://www.example.com",
-                CreditCardNumber = "1234-5678-9012-3456",
+                CreditCardNumber = "4234-5678-9012-3456",
                 // Add other properties and their valid values...
             };
         }
+
 
         private void WriteExceptionTestResult(Exception exception)
         {

@@ -13,7 +13,7 @@ namespace DomainLayer.Models.FileStorage
 
         // Reference to the associated activity
         [Required(ErrorMessage = "ActivityID is required.")]
-        public int ActivityID { get; set; }
+        public int? ActivityID { get; set; }
 
         // File type (e.g., GPX, photo)
         [Required(ErrorMessage = "FileType is required.")]

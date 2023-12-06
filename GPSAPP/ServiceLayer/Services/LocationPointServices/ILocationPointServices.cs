@@ -10,5 +10,6 @@ namespace ServiceLayer.Services.LocationPointServices
     public interface ILocationPointServices
     {
         void ValidateModel(ILocationPointModel locationPointModel);
+        void ValidateModelDataAnnotations(ILocationPointModel locationPointModel);
     }
 }

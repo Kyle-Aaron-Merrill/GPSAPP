@@ -5,7 +5,7 @@ namespace DomainLayer.Models.APITokens
     public interface IApiTokensModel
     {
         string AccelerometerAPIToken { get; set; }
-        int APITokenID { get; set; }
+        int? APITokenID { get; set; }
         string GoogleMapsAPIToken { get; set; }
         string GPSLoggerAPIToken { get; set; }
         string PopulationDensityAPIToken { get; set; }
@@ -13,7 +13,7 @@ namespace DomainLayer.Models.APITokens
         DateTime RideWithGPSTokenExpiration { get; set; }
         string StravaAPIToken { get; set; }
         DateTime StravaTokenExpiration { get; set; }
-        int UserID { get; set; }
+        int? UserID { get; set; }
 
         void RefreshTokens();
     }

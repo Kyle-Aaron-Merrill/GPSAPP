@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Models.User;
+using DomainLayer.Models.PrivacySettings;
 
 namespace ServiceLayer.CommonServices
 {

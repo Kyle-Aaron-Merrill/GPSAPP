@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Activity\Activity.cs" />
+    <Compile Include="Models\Activity\ActivityModel.cs" />
     <Compile Include="Models\Activity\IActivityModel.cs" />
     <Compile Include="Models\APITokens\ApiTokensModel.cs" />
     <Compile Include="Models\APITokens\IApiTokensModel.cs" />

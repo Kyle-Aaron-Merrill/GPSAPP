@@ -55,7 +55,7 @@
     <Compile Include="Services\FileStorageServices\IFileStorageRepository.cs" />
     <Compile Include="Services\FileStorageServices\IFileStorageServices.cs" />
     <Compile Include="Services\LocationPointServices\ILocationPointServices.cs" />
-    <Compile Include="Services\LocationPointServices\LocationPointRepository.cs" />
+    <Compile Include="Services\LocationPointServices\ILocationPointRepository.cs" />
     <Compile Include="Services\LocationPointServices\LocationPointServices.cs" />
     <Compile Include="Services\PrivacySettingsServices\IPrivacySettingsRepository.cs" />
     <Compile Include="Services\PrivacySettingsServices\IPrivacySettingsServices.cs" />

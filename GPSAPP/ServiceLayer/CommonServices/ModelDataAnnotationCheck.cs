@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Models.User;
+using DomainLayer.Models.PrivacySettings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

@@ -9,11 +9,11 @@ namespace DomainLayer.Models.APITokens
 {
     public class ApiTokensModel : IApiTokensModel
     {
-        public int APITokenID { get; set; }
+        public int? APITokenID { get; set; }
 
         // User-related information
         [Required(ErrorMessage = "UserID is required.")]
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
 
         // API-specific tokens
         [StringLength(255, ErrorMessage = "StravaAPIToken must be at most 255 characters.")]

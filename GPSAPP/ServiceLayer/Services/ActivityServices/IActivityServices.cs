@@ -10,5 +10,6 @@ namespace ServiceLayer.Services.ActivityServices
     public interface IActivityServices
     {
         void ValidateModel(IActivityModel activityModel);
+        void ValidateModelDataAnnotations(IActivityModel activityModel);
     }
 }

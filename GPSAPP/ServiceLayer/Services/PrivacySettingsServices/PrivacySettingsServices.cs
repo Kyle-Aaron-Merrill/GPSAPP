@@ -48,8 +48,12 @@ namespace ServiceLayer.Services.PrivacySettingsServices
 
         public void ValidateModel(IPrivacySettingsModel privacySettingsModel)
         {
+            throw new NotImplementedException();
+        }
+
+        public void ValidateModelDataAnnotations(IPrivacySettingsModel privacySettingsModel)
+        {
             _modelDataAnnotationCheck.ValidateModelDataAnnotations(privacySettingsModel);
-            // Additional validation specific to Privacy Settings, if needed
         }
         /*
         PrivacySettings Services:

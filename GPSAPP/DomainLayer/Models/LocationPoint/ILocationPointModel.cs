@@ -4,13 +4,13 @@ namespace DomainLayer.Models.LocationPoint
 {
     public interface ILocationPointModel
     {
-        int ActivityID { get; set; }
+        int? ActivityID { get; set; }
         double Altitude { get; set; }
         double BatteryLevel { get; set; }
         double HorizontalAccuracy { get; set; }
-        double Latitude { get; set; }
+        double? Latitude { get; set; }
         int LocationID { get; set; }
-        double Longitude { get; set; }
+        double? Longitude { get; set; }
         double PopulationDensity { get; set; }
         double PowerUsage { get; set; }
         DateTime Timestamp { get; set; }

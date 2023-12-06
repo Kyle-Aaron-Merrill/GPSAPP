@@ -48,8 +48,11 @@ namespace ServiceLayer.Services.FileStorageServices
 
         public void ValidateModel(IFileStorageModel fileStorageModel)
         {
+            throw new NotImplementedException();
+        }
+        public void ValidateModelDataAnnotations(IFileStorageModel fileStorageModel) 
+        {
             _modelDataAnnotationCheck.ValidateModelDataAnnotations(fileStorageModel);
-            // Additional validation specific to File Storage, if needed
         }
         /*
         For a FileStorage service, you might want to consider implementing additional functionalities to enhance the overall user experience and management of stored files. Here are some additional services you can provide:

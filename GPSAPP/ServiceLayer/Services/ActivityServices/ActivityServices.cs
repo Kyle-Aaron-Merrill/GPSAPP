@@ -46,6 +46,10 @@ namespace ServiceLayer.Services.ActivityServices
 
         public void ValidateModel(IActivityModel activityModel)
         {
+            throw new NotImplementedException();
+        }
+        public void ValidateModelDataAnnotations(IActivityModel activityModel) 
+        {
             _modelDataAnnotationCheck.ValidateModelDataAnnotations(activityModel);
             // Additional validation specific to Activity
         }

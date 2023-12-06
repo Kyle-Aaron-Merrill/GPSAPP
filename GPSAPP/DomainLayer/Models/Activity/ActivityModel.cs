@@ -13,7 +13,7 @@ namespace DomainLayer.Models.Activity
 
         // User-related information
         [Required(ErrorMessage = "UserID is required.")]
-        public int UserID { get; set; }
+        public int? UserID { get; set; }
 
         // Activity details
         [Required(ErrorMessage = "ActivityType is required.")]

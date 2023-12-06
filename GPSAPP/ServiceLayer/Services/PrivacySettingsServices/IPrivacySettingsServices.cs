@@ -10,5 +10,6 @@ namespace ServiceLayer.Services.PrivacySettingsServices
     public interface IPrivacySettingsServices
     {
         void ValidateModel(IPrivacySettingsModel privacySettingsModel);
+        void ValidateModelDataAnnotations(IPrivacySettingsModel privacySettingsModel);
     }
 }

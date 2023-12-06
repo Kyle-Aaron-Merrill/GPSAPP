@@ -10,5 +10,6 @@ namespace ServiceLayer.Services.ApiTokensServices
     public interface IApiTokensServices
     {
         void ValidateModel(IApiTokensModel apiTokensModel);
+        void ValidateModelDataAnnotations(IApiTokensModel apiTokensModel);
     }
 }

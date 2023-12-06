@@ -10,5 +10,6 @@ namespace ServiceLayer.Services.FileStorageServices
     public interface IFileStorageServices
     {
         void ValidateModel(IFileStorageModel fileStorageModel);
+        void ValidateModelDataAnnotations(IFileStorageModel fileStorageModel);
     }
 }

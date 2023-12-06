@@ -12,7 +12,7 @@ namespace DomainLayer.Models.Activity
         double ElevationGain { get; set; }
         DateTime EndTime { get; set; }
         DateTime StartTime { get; set; }
-        int UserID { get; set; }
+        int? UserID { get; set; }
 
         void AnalyzeActivity();
     }
